@@ -51,16 +51,5 @@ def results_view(request, musician_id):
                 'id': musician_id}
 
     return render(request, 'music/results.html', context)
-
-# class AlbumDetailView(generic.DetailView):
-#     model = Album
-#     template = 'views/adetails.html'
-
-# class SongDetailView(generic.DetailView):
-#     model = Song
-#     template = 'views/sdetails.html'
-
-# class ResultsView(generic.DetailView):
-#     model = Musician
-#     template = 'views/results.html'    
+  
     
