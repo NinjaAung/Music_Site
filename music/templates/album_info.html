@@ -1,0 +1,20 @@
+<!-- templates/album_info.html -->
+<a href="/musician/{{album.artist.id}}">Back to artist</a>
+
+
+<h1>{{ album.name }}</h1>
+
+
+Artist: {{ album.artist }}<br/>
+Genre: {{ album.genre }}<br/>
+Date Released: {{ album.publish_date }}
+
+
+<h2>Songs</h2>
+<ul>
+    {% for song in songs %}
+        <li>
+          Name: <a href="{% url 'song_info' song.id %}"> {{ song.name }} </a>
+        </li>
+    {% endfor %}
+</ul>
