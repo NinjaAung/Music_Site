@@ -1,7 +1,7 @@
 <!-- template/musician_info.html -->
 <a href="/musicians">Back to all musicians</a>
 
-<h1>{{ musician.name }}</h1>
+<h1>{{ musician.name }} Albums:</h1>
 
 {% for album in albums %}
     Name: <a href="{% url 'album_info' album.id %}"> {{ album.name }} </a>
