@@ -1,2 +1,12 @@
 <!-- template/musician_info.html -->
+<a href="/musicians">Back to all musicians</a>
+
 <h1>{{ musician.name }}</h1>
+
+{% load humanize %}
+
+{% for album in albums %}
+    <strong>Name:</strong> <a href="{% url 'album_info' album.id %}"> {{ album.name }} </a><br/>
+    <strong>Genre:</strong> {{ album.genre }}<br/>
+    <strong>Date Released:</strong> {{ album.publish_date }}
+{% endfor %}
