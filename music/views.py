@@ -1,7 +1,7 @@
 # music/views.py
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Musician
+from .models import Musician, Album, Song
 
 
 def home(request):
@@ -11,7 +11,7 @@ def musicians(request):
     context = {
         'musicians': Musician.objects.all()
     }
-    return render(request, 'musicians.html', context)
+    return render(request, 'musician.html', context)
 
 
 def musician_info(request, musician_id):
