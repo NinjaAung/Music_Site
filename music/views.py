@@ -1,11 +1,11 @@
 # music/views.py
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Musician, Album, Song
 
 
 def home(request):
-    return HttpResponse("Music_Site")
+    return redirect('/musicians')
 
 def musicians(request):
     context = {

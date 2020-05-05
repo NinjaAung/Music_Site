@@ -14,7 +14,7 @@ Date Released: {{ album.publish_date }}
 <ul>
     {% for song in songs %}
         <li>
-          Name: <a href="{% url 'song_info' song.id %}"> {{ song.name }} </a>
+          <a href="{% url 'song_info' song.id %}"> {{ song.name }} </a>
         </li>
     {% endfor %}
 </ul>

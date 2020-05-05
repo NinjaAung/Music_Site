@@ -4,5 +4,5 @@
 <h1>{{ musician.name }} Albums:</h1>
 
 {% for album in albums %}
-    Name: <a href="{% url 'album_info' album.id %}"> {{ album.name }} </a>
+    <a href="{% url 'album_info' album.id %}"> {{ album.name }} </a>
 {% endfor %}
