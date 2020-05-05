@@ -5,11 +5,11 @@ from .models import Musician
 
 
 def home(request):
-    return HttpResponse("Music_Site")
+    return musicians(request)
 
 def musicians(request):
     context = {
-        'musician': Musician.objects.all()
+        'musicians': Musician.objects.all()
     }
     return render(request, 'musician.html', context)
 
